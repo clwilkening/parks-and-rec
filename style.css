@@ -4,3 +4,36 @@ body {
   margin: 0;
   box-sizing: content-box;
 }
+
+.juke-box {
+  text-align:center;
+  border: 1px solid black;
+  margin: 10px auto;
+  width: 500px;
+}
+
+/*
+align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+*/
+.juke-box__type {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.juke-box__type h4 {
+  flex-basis: 100%;
+}
+
+.sound {
+  border: 1px solid #242424;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+  font-weight: bold;
+  margin: 5px;
+  padding: 10px;
+  width: 90px;
+  
+}
+
