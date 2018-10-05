@@ -42,9 +42,13 @@ const handleEnter = function(e) {
     if (!theChosenOne) {
       if (input.trim().toLowerCase() === character) {
         theChosenOne = character;
-        console.log(document.querySelector('body'))
-        document.querySelector('body').style.background = `url(media/${character}.png) no-repeat center center fixed`;
-        document.querySelector('.juke-box').style.backgroundColor = `rgba(156, 204, 101,.3)`
+        const body = document.querySelector('body');
+        body.style.background = `url(media/${character}.png) no-repeat center center fixed`;
+        body.style.backgroundSize = 'cover';
+        document.querySelector('.juke-box').style.backgroundColor = `rgba(50,50,50,.4)`
+        document.querySelectorAll('.juke-box__type h4').forEach(title => {
+          title.style.color = 'white';
+        });
         return;
       };
     };

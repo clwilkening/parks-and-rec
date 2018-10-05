@@ -3,42 +3,55 @@
 <head>
   <title>Flatiron | Parks and Rec</title>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fascinate|Pacifico|Material+Icons" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <header>
-    <h1>Parks and Rec</h1>
+    <h1 style="font-family:'Pacifico';">Parks and Rec</h1>
       <input class="search" type="text" placeholder="Who's your favorite character?">
   </header>
     <main>
       <section class="juke-box">
-        <h1 class="song-tite"></h1>
+        <h1 class="song-title"></h1>
         <div class="juke-box__type">
           <h4>Melody</h4>
+          <i class="material-icons">info</i>
           <div data-key="1" class="btn sound">Violin</div>
-          <div data-key="2" class="btn sound">Viola</div>
+          <div data-key="4" class="btn sound">Trumpet</div>
+          <i class="material-icons">info</i>
         </div>
         <div class="juke-box__type">
           <h4>Accompaniment</h4>
+          <i class="material-icons">info</i>
+          <div data-key="2" class="btn sound">Viola</div>
           <div data-key="3" class="btn sound">Oboe</div>
-          <div data-key="4" class="btn sound">Trumpet</div>
+          <i class="material-icons">info</i>
         </div>
         <div class="juke-box__type">
           <h4>Bass</h4>
+          <i class="material-icons">info</i>
           <div data-key="5" class="btn sound">Cello</div>
           <div data-key="6" class="btn sound">Bass</div>
+          <i class="material-icons">info</i>
         </div>
         <div class="juke-box__type">
           <h4>Percussion</h4>
-          <div data-key="7" class="btn sound">Snare</div>
+          <i class="material-icons">info</i>
+          <div data-key="7" class="btn sound active">Snare</div>
           <div data-key="8" class="btn sound">Drums</div>
+          <i class="material-icons">info</i>
         </div>
         <section class="controls">
           <button class="btn play">Play &#9654;</button>
-          <button class="btn pause">Pause &#10074; &#10074;</button>
+          <button class="btn pause">Pause &#10074; &#10074;</button>      
         </section>
       </section>
+      <article class='.article'>
+        <h2></h2>
+        <p></p>
+      </article>
     </main>
   <footer>
   
