@@ -12,11 +12,6 @@ body {
   width: 500px;
 }
 
-/*
-align-items: center;
-  display: flex;
-  flex-flow: column wrap;
-*/
 .juke-box__type {
   display:flex;
   flex-flow: row wrap;
@@ -26,14 +21,34 @@ align-items: center;
   flex-basis: 100%;
 }
 
-.sound {
-  border: 1px solid #242424;
+.btn {
   border-radius: 5px;
   box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
-  font-weight: bold;
   margin: 5px;
   padding: 10px;
+  font-size: 1rem;
+}
+
+.sound {
+  border: 1px solid #242424;
+  font-weight: bold;
   width: 90px;
-  
+}
+
+.active {
+  background-color: #242424;
+  color: white;
+}
+
+.play {
+  background-color: #4caf50;
+  border: 1px solid #4caf50;
+  color: white;
+}
+
+.pause {
+  background-color: #b71c1c;
+  border: 1px solid #b71c1c;
+  color: white;
 }
 
