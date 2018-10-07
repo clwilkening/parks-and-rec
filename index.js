@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", () => { 
   document.querySelectorAll('.sound').forEach(sound => {
     sound.addEventListener('click', selectSound);
   });
@@ -63,12 +63,10 @@ const handleEnter = function(e) {
 const showDescription = function() {
   const key = this.getAttribute("data-key");
   const modal = document.querySelector('.description');
-  console.log(key)
   const title = descriptions[key].title;
   const description = descriptions[key].desc;
   const articleTitle = document.querySelector('.description h2');
   const articleDesc = document.querySelector('.description p:first-of-type');
-  console.log(articleTitle,articleDesc);
   articleTitle.textContent = title;
   articleDesc.textContent = description;
   modal.classList.add('showing');
@@ -78,8 +76,6 @@ const hideDescription = () => {
   const modal = document.querySelector('.description');
   modal.classList.remove('showing');
 };
-
-
 
 const descriptions = {
   1: {
