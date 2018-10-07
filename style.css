@@ -1,44 +1,57 @@
 :root {
   --green: #9ccc65;
+  --dark-green: #4caf50;
+  --black: #242424;
 }
 
 body {
   background: url('media/crossword.png') repeat;
-  padding: 0;
+  background-size: cover;
+  box-sizing: content-box;
+  color: var(--black);
   font-family: 'Lato', sans-serif;
   margin: 0;
-  box-sizing: content-box;
-  background-size: cover;
+  padding: 0;
 }
 
-header {
-  position: sticky;
+header{
+  align-items: center;
   background-color: var(--green);
-  height: 50px;
-  padding: 5px 15px;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: row;
-  align-items: center;
+  height: 50px;
   justify-content: space-between;
-  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+  padding: 5px 15px;
+  position: sticky;
+}
+
+header h1, footer p {
+  font-family: 'Pacifico';
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
 }
 
 .search {
-  width: 275px;
-  height: 40px;
   font-size: 1.2rem;
+  height: 40px;
+  width: 40%;
 }
 
 .active::after {
-  content: '!'
+  content: '!';
 }
 
 .juke-box {
   background-color: var(--green);
-  /* border-radius: 5px; */
   box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
-  text-align:center;
-  /* border: 1px solid var(--green); */
+  text-align: center;
   margin: 10px auto;
   max-width: 500px;
   transition: background 1s ease;
@@ -56,7 +69,7 @@ header {
   transition: color 1s ease;
 }
 .juke-box__type i {
-  color: #43a047;
+  color: var(--dark-green);
   margin-top: 14px;
   transition: font-size 1s ease;
 }
@@ -65,34 +78,32 @@ i:hover {
   color:#388e3c;
 }
 .btn {
-  /* border-radius: 5px; */
   box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+  font-size: 1rem;
   margin: 5px;
   padding: 10px;
-  font-size: 1rem;
 }
 
 .sound {
-  border: 1px solid white;
   background-color: white;
-  font-weight: bold;
+  border: 1px solid white;
   width: 90px;
+  font-weight: bold;
 }
 
 .sound:hover, .btn:hover, i:hover {
   cursor: pointer;
 }
 
-
 .active {
-  background-color: #242424;
-  border: 1px solid #242424;
+  background-color: var(--black);
+  border: 1px solid var(--black);
   color: white;
 }
 
 .play {
-  background-color: #4caf50;
-  border: 1px solid #4caf50;
+  background-color: var(--dark-green);
+  border: 1px solid var(--dark-green);
   color: white;
 }
 
@@ -102,8 +113,50 @@ i:hover {
   color: white;
 }
 
-.article {
+.description {
+  background-color: white;
+  box-shadow: 0 2px 2px 0px grey;
+  left: -100%;
+  padding: 10px 20px;
+  position: fixed;
+  top: 25%;
+  transition: left .25s ease;
   width: 50%;
-  height: 400px;
+  z-index: 2;
 }
 
+.description p:nth-child(2n+1) a {
+  color: var(--dark-green);
+}
+
+.showing {
+  left:25%;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .search{
+    font-size: 1rem;
+    width: 50%;
+  }
+
+  .description {
+    width: 85%;
+  }
+  .showing {
+    left: 2.5%;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  .search {
+    font-size: .7rem;
+    width: 55%;
+  }
+}
