@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => { 
+  document.addEventListener('keypress', handleEnter);
+  document.querySelector('.description').addEventListener('click', hideDescription);
+  document.querySelectorAll('.juke-box__type i').forEach(i => {
+    i.addEventListener('click', showDescription);
+  });
   document.querySelectorAll('.sound').forEach(sound => {
     sound.addEventListener('click', selectSound);
   });
   document.querySelector('.play').addEventListener('click', play);
   document.querySelector('.pause').addEventListener('click', pause);
-  document.querySelectorAll('.juke-box__type i').forEach(i => {
-    i.addEventListener('click', showDescription);
-  });
-  document.addEventListener('keypress', handleEnter);
-  document.querySelector('.description').addEventListener('click', hideDescription)
 });
 
 const selectSound = function() {
@@ -49,7 +49,7 @@ const handleEnter = function(e) {
         const body = document.querySelector('body');
         body.style.background = `url(media/${character}.png) no-repeat center center fixed`;
         body.style.backgroundSize = 'cover';
-        document.querySelector('.juke-box').style.backgroundColor = `rgba(50,50,50,.4)`
+        document.querySelector('.juke-box').style.backgroundColor = `rgba(50,50,50,.4)`;
         document.querySelectorAll('.juke-box__type h4').forEach(title => {
           title.style.color = 'white';
         });
